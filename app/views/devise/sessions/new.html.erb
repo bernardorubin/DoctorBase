@@ -1,0 +1,36 @@
+<div class="container">
+
+<h2 style="text-align:center">Ingresar</h2>
+
+<div class="col-md-6 col-md-offset-3">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field form-group">
+    <%= f.label :email, "Email:", class: "col-md-3 control-label"  %>
+    <div class="col-md-9">
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  </div>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :password, "Password:", class: "col-md-3 control-label"  %>
+    <div class="col-md-9">
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      </div>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field" style="text-align:center">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions" style="text-align:center">
+    <%= f.submit "Log in", class: "btn btn-default btn-primary" %>
+  </div>
+<% end %>
+<div style="text-align:center">
+<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>

@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$primary-color: lightgray;
+
+
+body {
+  padding-top: 60px;
+}
+ .home {
+   text-align: center;
+   margin: auto;
+   display: block;
+   height: 200px;
+ }
+
+ .menu {
+   border: thin solid #18bc9c;
+   height: 15vh;
+   font-size: 190%;
+   margin-top: 20px;
+   padding-top: 20px;
+   transition: all ease-in-out .1s;
+
+ }
+
+.patients {
+  text-align: left;
+}
+
+.patients a:hover {
+  border: thick solid #18bc9c;
+}
+
+
+ .patients:nth-child(odd) {
+  border: thin solid #18bc9c;
+  background-color: white;
+     border-top: none;
+ }
+
+
+ .patients:nth-child(even) {
+  border: thin solid #18bc9c;
+   border-top: none;
+  background-color: rgba(211,211,211,0.3);
+ }
+
+ .patients:nth-child(1) {
+  border: thin solid #18bc9c;
+ }
+
+ .patients a {
+   color: #2c3e50;
+   transition: all ease-in-out .1s;
+ }
+
+ .menu:hover {
+   border: thick solid #18bc9c;
+ }
+
+
+ .menu a:hover, .patients a:hover {
+   text-decoration: none;
+ }
+
+ .list {
+   border: thin dotted lightgray;
+   height: 10vh;
+   font-size: 120%;
+   margin: auto;
+
+ }
+
+ .form-control, .control-label {
+
+   margin-top: 10px;
+ }

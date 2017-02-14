@@ -1,0 +1,32 @@
+<div class="container-fluid">
+
+<h1 style="text-align: center">Detalle de Paciente</h1>
+<div class="col-sm-6">
+<h2>Nombre: <%= @patient.first_name %> <%= @patient.last_name %></h2>
+<hr>
+<p>Fecha de Nacimiento: <%= @patient.birth_date %></p>
+<hr>
+<p>Edad: <%= (Time.now.to_date - @patient.birth_date).to_i/365 %></p>
+<hr>
+<p>Sexo: <%= @patient.gender %></p>
+<hr>
+<p>Dirección: <%= @patient.address %></p>
+<hr>
+<p>Última Cita: <%= @patient.last_appointment %></p>
+<hr>
+<!-- <p>Usuario(dr) al que le pertenece este paciente<%= @patient.user_id %></p> -->
+<%= link_to 'Editar', edit_patient_path(@patient), class: "btn btn-default btn-secondary" %>
+<%= link_to 'Eliminar', patient_path(@patient), method: :delete,
+data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger" %>
+<%= link_to 'Nueva Cita', new_appointment_path(:patient_id => @patient.id), class: "btn btn-default btn-primary" %>
+</div>
+<div class="col-sm-6">
+<h2>Citas Anteriores</h2>
+<hr>
+<% @appointments.each do |q|  %>
+Fecha de Cita: <%= link_to q.date.to_date, appointment_path(q) %>
+<hr>
+<% end %>
+
+</div>
+</div>

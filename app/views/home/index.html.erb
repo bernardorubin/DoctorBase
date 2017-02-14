@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <h1 style="text-align:center">Doctor<i class="fa fa-connectdevelop fa-spin" aria-hidden="true"></i>Base</h1>
+  <h3 style="text-align:center;">Bienvenido Dr. <%= current_user.display_name %></h3>
+  <div class="home">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 menu"><%= link_to('Pacientes', patients_path) %></div>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 menu"><%= link_to('Citas', appointments_path) %></div>
+    <div class=" col-xs-12 col-sm-8 col-sm-offset-2 menu">
+    <%= link_to 'Paciente Nuevo', new_patient_path %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+
+<h1 style="text-align:center">Todas las Citas</h1>
+<div class="home">
+<% @appointments.each do |q|  %>
+<div class="col-xs-12 col-sm-8 col-sm-offset-2 patients">
+<%= link_to q.date.to_date, appointment_path(q) %>
+<%= Patient.find_by_id(q.patient_id).last_name %> 
+<%= Patient.find_by_id(q.patient_id).first_name %>
+</div>
+<% end %>
+</div>
+</div>

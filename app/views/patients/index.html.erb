@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <h1 style="text-align:center">Todos los Pacientes</h1>
+  <div class="home">
+    <% @patients.each do |q|  %>
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 patients"><%= link_to q.first_name, patient_path(q) %> <%= link_to q.last_name, patient_path(q) %> </div>
+    <% end %>
+    </div>
+</div>

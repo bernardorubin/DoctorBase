@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<h1 style="text-align:center">Cita</h1>
+<h1>Fecha: <%= @appointment.date.to_date %></h1>
+<hr>
+<p>Celda 1: <%= @appointment.field1 %></p>
+<hr>
+<p>Celda 2: <%= @appointment.field2 %></p>
+<hr>
+<p>Celda 3: <%= @appointment.field3 %></p>
+<hr>
+<p>Celda 4: <%= @appointment.field4 %></p>
+<hr>
+<p>Celda 5: <%= @appointment.field5 %></p>
+<hr>
+<p>Celda 6: <%= @appointment.field6 %></p>
+<hr>
+<p>Celda 7: <%= @appointment.field7 %></p>
+<hr>
+<p>Celda 8: <%= @appointment.field8 %></p>
+<hr>
+<p>Celda 9: <%= @appointment.field9 %></p>
+<hr>
+
+<!-- <p>Celda 2: <%= @appointment.patient_id %></p> -->
+<%= link_to 'Editar', edit_appointment_path(@appointment), class: "btn btn-default btn-secondary" %>
+<%= link_to 'Eliminar', appointment_path(@appointment), method: :delete,
+data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger"  %>
+</div>
